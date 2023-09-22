@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://drq04fe2kbqvj"]
+
+[ext_resource type="Texture2D" uid="uid://c7v4h8fn1el2e" path="res://spiky2.png" id="1_fcuea"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_18jls"]
+radius = 313.0
+height = 736.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(222, 388)
+scale = Vector2(0.1, 0.1)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_18jls")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fcuea")
