@@ -13,4 +13,11 @@ config_version=5
 config/name="Pixel_godot"
 run/main_scene="res://Player.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://resources/icon.svg"
+
+[input]
+
+new_left={
+"deadzone": 0.5,
+"events": []
+}

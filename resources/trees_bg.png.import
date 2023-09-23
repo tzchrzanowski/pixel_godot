@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7v4h8fn1el2e"
-path="res://.godot/imported/spiky2.png-293ade00605730abb45efda8c4b1b7cf.ctex"
+uid="uid://smwl12qmkdex"
+path="res://.godot/imported/trees_bg.png-6c9ddc79a1c84b4d0e47753fe6c24fb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spiky2.png"
-dest_files=["res://.godot/imported/spiky2.png-293ade00605730abb45efda8c4b1b7cf.ctex"]
+source_file="res://resources/trees_bg.png"
+dest_files=["res://.godot/imported/trees_bg.png-6c9ddc79a1c84b4d0e47753fe6c24fb1.ctex"]
 
 [params]
 

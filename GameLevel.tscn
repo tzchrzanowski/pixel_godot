@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c675gwxlbkkf6"]
+[gd_scene load_steps=8 format=3 uid="uid://c675gwxlbkkf6"]
 
 [ext_resource type="Script" path="res://basicNode.gd" id="1_qlnw5"]
-[ext_resource type="Texture2D" uid="uid://c8jdcxws0lnrm" path="res://icon.svg" id="2_6li18"]
+[ext_resource type="Texture2D" uid="uid://smwl12qmkdex" path="res://resources/trees_bg.png" id="2_50fvh"]
 [ext_resource type="Texture2D" uid="uid://dijbmqb86v5gl" path="res://bw_box1.png" id="3_d40bv"]
+[ext_resource type="Texture2D" uid="uid://c8jdcxws0lnrm" path="res://resources/icon.svg" id="3_kgrby"]
 [ext_resource type="PackedScene" uid="uid://drq04fe2kbqvj" path="res://Player.tscn" id="4_3gwkk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jd0jx"]
@@ -15,6 +16,16 @@ size = Vector2(219, 93)
 position = Vector2(-3, 0)
 script = ExtResource("1_qlnw5")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+texture_repeat = 2
+offset_left = 2.0
+offset_right = 450.0
+offset_bottom = 448.0
+scale = Vector2(2.89358, 1.45206)
+texture = ExtResource("2_50fvh")
+expand_mode = 4
+
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2(279, -220)
 gravity_scale = 0.1
@@ -22,7 +33,7 @@ linear_velocity = Vector2(100, 2.08165e-12)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
-texture = ExtResource("2_6li18")
+texture = ExtResource("3_kgrby")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(-0.5, 0)
@@ -35,7 +46,7 @@ linear_velocity = Vector2(100, 2.08165e-12)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D2"]
-texture = ExtResource("2_6li18")
+texture = ExtResource("3_kgrby")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
 position = Vector2(-0.5, 0)
