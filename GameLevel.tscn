@@ -12,6 +12,7 @@ size = Vector2(123, 120)
 size = Vector2(219, 93)
 
 [node name="GameLevel" type="Node2D"]
+position = Vector2(-3, 0)
 script = ExtResource("1_qlnw5")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
