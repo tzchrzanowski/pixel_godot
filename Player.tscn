@@ -1,11 +1,40 @@
-[gd_scene load_steps=4 format=3 uid="uid://drq04fe2kbqvj"]
+[gd_scene load_steps=8 format=3 uid="uid://drq04fe2kbqvj"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_g30xy"]
-[ext_resource type="Texture2D" uid="uid://c7v4h8fn1el2e" path="res://resources/spiky2.png" id="2_8yisd"]
+[ext_resource type="Texture2D" uid="uid://de2du7b8n34je" path="res://resources/player_animation/idle/idle_1.png" id="2_weuae"]
+[ext_resource type="Texture2D" uid="uid://dq1ahxmqhjfhu" path="res://resources/player_animation/idle/idle_2.png" id="3_2oqbd"]
+[ext_resource type="Texture2D" uid="uid://6uqa4imjrixg" path="res://resources/player_animation/idle/idle_3.png" id="4_wpcf2"]
+[ext_resource type="Texture2D" uid="uid://bto15hueg3qmm" path="res://resources/player_animation/idle/idle_4.png" id="5_txfc1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_18jls"]
-radius = 313.0
-height = 736.0
+radius = 398.744
+height = 907.486
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fpoxt"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_weuae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2oqbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wpcf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_txfc1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(222, 388)
@@ -14,7 +43,11 @@ script = ExtResource("1_g30xy")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.742513, 0.650988)
 shape = SubResource("CapsuleShape2D_18jls")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_8yisd")
+[node name="animatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(30.2995, 26.394)
+sprite_frames = SubResource("SpriteFrames_fpoxt")
+animation = &"idle"
+frame_progress = 0.196382
