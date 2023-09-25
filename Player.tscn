@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://drq04fe2kbqvj"]
+[gd_scene load_steps=16 format=3 uid="uid://drq04fe2kbqvj"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_g30xy"]
 [ext_resource type="Texture2D" uid="uid://de2du7b8n34je" path="res://resources/player_animation/idle/idle_1.png" id="2_weuae"]
@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://6uqa4imjrixg" path="res://resources/player_animation/idle/idle_3.png" id="4_wpcf2"]
 [ext_resource type="Texture2D" uid="uid://bto15hueg3qmm" path="res://resources/player_animation/idle/idle_4.png" id="5_txfc1"]
 [ext_resource type="Texture2D" uid="uid://b1dgqrl487kb" path="res://resources/player_animation/run/run_1.png" id="6_0aiqg"]
+[ext_resource type="Texture2D" uid="uid://6mhwquqp3yjs" path="res://resources/player_animation/jump/jump_1.png" id="6_d1kh7"]
 [ext_resource type="Texture2D" uid="uid://s5ivrqhcqb6m" path="res://resources/player_animation/run/run_2.png" id="7_2wkjq"]
+[ext_resource type="Texture2D" uid="uid://cyh07mb0ipp0a" path="res://resources/player_animation/jump/jump_2.png" id="7_t185g"]
 [ext_resource type="Texture2D" uid="uid://cu7x6h4jdh680" path="res://resources/player_animation/run/run_3.png" id="8_vlfa1"]
 [ext_resource type="Texture2D" uid="uid://7na5gnogy37v" path="res://resources/player_animation/run/run_4.png" id="9_dtpgw"]
 [ext_resource type="Texture2D" uid="uid://b7jwe0keroj1i" path="res://resources/player_animation/run/run_5.png" id="10_p7afw"]
@@ -34,6 +36,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_d1kh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_t185g")
+}],
+"loop": true,
+"name": &"jump",
 "speed": 5.0
 }, {
 "frames": [{
@@ -73,5 +86,4 @@ shape = SubResource("CapsuleShape2D_18jls")
 [node name="animatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(30.2995, 26.394)
 sprite_frames = SubResource("SpriteFrames_fpoxt")
-animation = &"run"
-frame_progress = 0.383205
+animation = &"jump"
