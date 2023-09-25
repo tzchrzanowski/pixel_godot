@@ -1,10 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://drq04fe2kbqvj"]
+[gd_scene load_steps=14 format=3 uid="uid://drq04fe2kbqvj"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_g30xy"]
 [ext_resource type="Texture2D" uid="uid://de2du7b8n34je" path="res://resources/player_animation/idle/idle_1.png" id="2_weuae"]
 [ext_resource type="Texture2D" uid="uid://dq1ahxmqhjfhu" path="res://resources/player_animation/idle/idle_2.png" id="3_2oqbd"]
 [ext_resource type="Texture2D" uid="uid://6uqa4imjrixg" path="res://resources/player_animation/idle/idle_3.png" id="4_wpcf2"]
 [ext_resource type="Texture2D" uid="uid://bto15hueg3qmm" path="res://resources/player_animation/idle/idle_4.png" id="5_txfc1"]
+[ext_resource type="Texture2D" uid="uid://b1dgqrl487kb" path="res://resources/player_animation/run/run_1.png" id="6_0aiqg"]
+[ext_resource type="Texture2D" uid="uid://s5ivrqhcqb6m" path="res://resources/player_animation/run/run_2.png" id="7_2wkjq"]
+[ext_resource type="Texture2D" uid="uid://cu7x6h4jdh680" path="res://resources/player_animation/run/run_3.png" id="8_vlfa1"]
+[ext_resource type="Texture2D" uid="uid://7na5gnogy37v" path="res://resources/player_animation/run/run_4.png" id="9_dtpgw"]
+[ext_resource type="Texture2D" uid="uid://b7jwe0keroj1i" path="res://resources/player_animation/run/run_5.png" id="10_p7afw"]
+[ext_resource type="Texture2D" uid="uid://dkmip4fw024bo" path="res://resources/player_animation/run/run_6.png" id="11_10qle"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_18jls"]
 radius = 398.744
@@ -30,9 +36,27 @@ animations = [{
 "name": &"idle",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_0aiqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2wkjq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vlfa1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dtpgw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_p7afw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_10qle")
+}],
 "loop": true,
-"name": &"new_animation",
+"name": &"run",
 "speed": 5.0
 }]
 
@@ -49,5 +73,5 @@ shape = SubResource("CapsuleShape2D_18jls")
 [node name="animatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(30.2995, 26.394)
 sprite_frames = SubResource("SpriteFrames_fpoxt")
-animation = &"idle"
-frame_progress = 0.196382
+animation = &"run"
+frame_progress = 0.383205
