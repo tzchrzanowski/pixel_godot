@@ -41,6 +41,8 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		$animatedSprite2D.play("idle");
-		
 	
+	if Input.is_action_pressed("crouch") and is_on_floor():
+		$animatedSprite2D.play("crouch");
+
 	move_and_slide()
