@@ -166,4 +166,3 @@ shape = SubResource("CapsuleShape2D_18jls")
 scale = Vector2(30.2995, 26.394)
 sprite_frames = SubResource("SpriteFrames_fpoxt")
 animation = &"run"
-frame_progress = 0.321152

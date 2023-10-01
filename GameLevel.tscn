@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c675gwxlbkkf6"]
+[gd_scene load_steps=15 format=3 uid="uid://c675gwxlbkkf6"]
 
 [ext_resource type="Script" path="res://basicNode.gd" id="1_qlnw5"]
 [ext_resource type="Texture2D" uid="uid://vy6oefeqe35r" path="res://resources/background/back.png" id="2_ds7d5"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dkk312o3j7tyr" path="res://Gold_Coin.tscn" id="5_01667"]
 [ext_resource type="Texture2D" uid="uid://buglin33nsckh" path="res://resources/environment/big-crate.png" id="5_djv5y"]
 [ext_resource type="Texture2D" uid="uid://bxb8lscbb1dby" path="res://resources/environment/tileset.png" id="6_4f12b"]
+[ext_resource type="PackedScene" uid="uid://wrldbfb5w0qn" path="res://Enemy.tscn" id="8_3bebb"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ju1lk"]
 
@@ -891,7 +892,7 @@ position = Vector2(-3, 0)
 script = ExtResource("1_qlnw5")
 
 [node name="Coin" parent="." instance=ExtResource("5_01667")]
-position = Vector2(408, 507)
+position = Vector2(413, 422)
 scale = Vector2(2, 2)
 
 [node name="Coin2" parent="." instance=ExtResource("5_01667")]
@@ -971,3 +972,6 @@ limit_top = 0
 limit_bottom = 1900
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+
+[node name="Enemy" parent="." instance=ExtResource("8_3bebb")]
+position = Vector2(1774, 320)
