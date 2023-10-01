@@ -6,6 +6,11 @@ const JUMP_VELOCITY = -500.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+# Coins collected variable:
+var score = 0
+func score_count():
+		score = score +1;
+		
 func get_move_direction():
 	var direction = 0
 	if Input.is_action_pressed("new_left"):

@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dkk312o3j7tyr"]
+[gd_scene load_steps=7 format=3 uid="uid://dkk312o3j7tyr"]
 
 [ext_resource type="Texture2D" uid="uid://cqib7ijkhblvt" path="res://resources/coin_animation/gold_coin.png" id="1_b7ppi"]
+[ext_resource type="Script" path="res://Gold_Coin.gd" id="1_nf6ow"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4b07n"]
 radius = 6.0
@@ -44,7 +45,9 @@ _data = {
 "Rotate_Coin": SubResource("Animation_c0e6u")
 }
 
-[node name="Area2D" type="Area2D"]
+[node name="Gold-coin" type="Area2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_nf6ow")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_4b07n")
@@ -57,3 +60,5 @@ hframes = 6
 libraries = {
 "": SubResource("AnimationLibrary_ei7fl")
 }
+
+[connection signal="body_entered" from="." to="." method="_on_Gbody_entered"]
