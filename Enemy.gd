@@ -5,7 +5,6 @@ const SPEED = 150
 
 func _physics_process(delta):
 	velocity.x = SPEED * direction;
-	
 	if direction:
 		if direction == -1:
 			$AnimatedSprite2D.flip_h = false
@@ -13,4 +12,9 @@ func _physics_process(delta):
 		else:
 			$AnimatedSprite2D.flip_h = true
 			$AnimatedSprite2D.play("walk")
+			
 	move_and_slide()
+	
+	if $RayCast2D.is_colliding() == false:
+		direction = direction * -1;
+		$RayCast2D.position.x *= -1;

@@ -69,3 +69,7 @@ sprite_frames = SubResource("SpriteFrames_r8qdu")
 animation = &"walk"
 frame = 3
 frame_progress = 0.904834
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-15, 2.08165e-12)
+target_position = Vector2(2.08165e-12, 15)
