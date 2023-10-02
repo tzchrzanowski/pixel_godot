@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var direction = -1
 const SPEED = 150
+var lives = 3;
 
 func _physics_process(delta):
 	velocity.x = SPEED * direction;
@@ -18,3 +19,9 @@ func _physics_process(delta):
 	if $RayCast2D.is_colliding() == false:
 		direction = direction * -1;
 		$RayCast2D.position.x *= -1;
+
+
+func _on_collision_checker_body_entered(body):
+	lives = lives -1;
+	if (lives == 0):
+		get_tree().change_scene_to_file("res://GameLevel.tscn");

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://wrldbfb5w0qn"]
+[gd_scene load_steps=12 format=3 uid="uid://wrldbfb5w0qn"]
 
 [ext_resource type="Texture2D" uid="uid://cfpabapcfbbjt" path="res://resources/enemies/oposum.png" id="1_mea73"]
 [ext_resource type="Script" path="res://Enemy.gd" id="2_yj17k"]
@@ -56,6 +56,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vln3k"]
+size = Vector2(32.3333, 20)
+
 [node name="Enemy" type="CharacterBody2D"]
 scale = Vector2(3, 3)
 script = ExtResource("2_yj17k")
@@ -73,3 +76,11 @@ frame_progress = 0.904834
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(-15, 2.08165e-12)
 target_position = Vector2(2.08165e-12, 15)
+
+[node name="CollisionChecker" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionChecker"]
+position = Vector2(-0.833333, 3.66667)
+shape = SubResource("RectangleShape2D_vln3k")
+
+[connection signal="body_entered" from="CollisionChecker" to="." method="_on_collision_checker_body_entered"]

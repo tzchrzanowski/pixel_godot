@@ -975,3 +975,6 @@ drag_vertical_enabled = true
 
 [node name="Enemy" parent="." instance=ExtResource("8_3bebb")]
 position = Vector2(1774, 320)
+
+[node name="Enemy2" parent="." instance=ExtResource("8_3bebb")]
+position = Vector2(3638, 1021)
